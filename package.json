@@ -1,12 +1,33 @@
 {
   "name": "vanila-js-spa",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./app.js",
+    "build": "webpack -w",
+    "dev": "concurrently \"webpack -w --mode development\" \"nodemon ./app.js\""
   },
   "dependencies": {
-    "express": "~4.16.1",
-    "http": "0.0.1-security"
+    "concurrently": "^6.2.1",
+    "express": "^4.16.4",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "babel-register": "^6.26.0",
+    "css-loader": "^6.2.0",
+    "html-loader": "^1.0.0-alpha.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "node-sass": "^6.0.1",
+    "node-scss": "^7.0.3",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-middleware": "^5.1.0",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
