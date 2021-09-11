@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./app.js",
-    "build": "webpack -w",
-    "dev": "concurrently \"webpack -w --mode development\" \"nodemon ./app.js\""
+    "build": "webpack -w --mode production",
+    "dev": "concurrently \"webpack -w --mode development\" \"nodemon ./app.js\"",
+    "dev-server": "concurrently \"webpack -w --mode development\" \"webpack-dev-server --hot\"" // dev server + hot reload
   },
   "dependencies": {
     "concurrently": "^6.2.1",
@@ -28,6 +29,7 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-middleware": "^5.1.0",
+    "webpack-dev-server": "^4.2.0",
     "webpack-hot-middleware": "^2.25.0"
   }
 }

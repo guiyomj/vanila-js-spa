@@ -18,7 +18,7 @@ app.use(webpackDevMiddleware(compiler))
 app.use(webpackHotMiddleware(compiler))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', controller)
-
+app.timeout = 1000
 app.listen(80, () => {
     console.log('Server is Listening')
 })
