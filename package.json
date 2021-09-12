@@ -6,7 +6,7 @@
     "start": "nodemon ./app.js",
     "build": "webpack -w --mode production",
     "dev": "concurrently \"webpack -w --mode development\" \"nodemon ./app.js\"",
-    "dev-server": "concurrently \"webpack -w --mode development\" \"webpack-dev-server --hot\"" // dev server + hot reload
+    "dev-server": "concurrently \"webpack -w --mode development\" \"webpack-dev-server --hot\""
   },
   "dependencies": {
     "concurrently": "^6.2.1",

@@ -8,7 +8,7 @@ const BASE_URL = './src'
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
-    entry: ['webpack-hot-middleware/client?reload=true', `${BASE_URL}/index.js`],
+    entry: `${BASE_URL}/index.js`,
     output: {
         filename: 'index.bundle.js', // bundle 될 파일 이름
         path: path.resolve(__dirname, 'public'),
