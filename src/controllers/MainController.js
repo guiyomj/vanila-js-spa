@@ -2,8 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 /* GET home page. */
-router.get('/test', (req, res, next) => {
-  res.json({ title: 'Express' })
+router.get('/', (req, res, next) => {
+  res.send('Express')
+})
+router.get('/result', (req, res, next) => {
+  res.send('Express${Header}')
 })
 
 module.exports = router

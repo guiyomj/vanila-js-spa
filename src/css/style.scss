@@ -1,7 +1,10 @@
+@import 'reset.css';
+
 body {
     background: #fff;
 
     button {
         border: none;
+        cursor: pointer;
     }
 }
