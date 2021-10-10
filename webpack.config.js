@@ -8,7 +8,7 @@ const BASE_URL = './src'
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
-    entry: `${BASE_URL}/index.js`,
+    entry: `${BASE_URL}/js/index.js`,
     output: {
         filename: 'index.bundle.js', // bundle 될 파일 이름
         path: path.resolve(__dirname, 'public'),
@@ -16,10 +16,11 @@ module.exports = {
         publicPath: '/public/' //웹팩 미들웨어 장소
     },
     devServer: {
-      port: 80,
+      port: 3000,
     },
     plugins: [
         new HtmlWebpackPlugin({
+            showErrors: true, // 에러 발생시 메세지가 브라우저 화면에 노출
             template: `${BASE_URL}/index.html`, // html webpack플러그인을 통해 html 파일도 함께 bundle
         }),
         new miniCssExtractPlugin({ filename: 'css/style.css' }),
